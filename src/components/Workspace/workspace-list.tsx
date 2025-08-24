@@ -4,8 +4,8 @@ import type { IWorkspace } from "../../types";
 import { COLORS } from "../../constants";
 import { AxiosError } from "axios";
 import { Axios } from "../../configs/axios";
-import env from "../../env";
 import { useNavigate } from "react-router-dom";
+import env from "../../env";
 
 interface IProps {
   workspaces: IWorkspace[];

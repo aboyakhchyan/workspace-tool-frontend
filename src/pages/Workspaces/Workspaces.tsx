@@ -9,10 +9,10 @@ import React, { useEffect, useRef, useState, type FormEvent } from "react";
 import { PrimaryButton, SharedModal, WorkspaceList } from "@components";
 import { useDebounce } from "../../hooks";
 import { Axios } from "../../configs/axios";
-import env from "../../env";
 import { AxiosError } from "axios";
 import { workspaceNameSchema } from "../../configs/joi.schema";
 import type { IWorkspace } from "../../types";
+import env from "../../env";
 
 const WorkspacesPage: React.FC = () => {
   const [workspaces, setWorkspaces] = useState<IWorkspace[]>([]);
