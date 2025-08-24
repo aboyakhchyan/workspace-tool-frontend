@@ -1,4 +1,5 @@
 export interface IRoute {
+  HOME: string;
   REGISTER: string;
   LOGIN: string;
   PROFILE: string;

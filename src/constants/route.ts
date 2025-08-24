@@ -1,7 +1,8 @@
 import type { IRoute } from "../interfaces";
 
 export const ROUTES: IRoute = {
-  REGISTER: "/",
+  HOME: '/',
+  REGISTER: "/register",
   LOGIN: "/login",
   DASHBOARD: "/dashboard",
   PROFILE: "profile",

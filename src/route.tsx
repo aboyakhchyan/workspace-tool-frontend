@@ -8,17 +8,24 @@ import {
   NotFound,
   ErrorBoundary,
 } from "@pages";
-import {ROUTES} from './constants'
-import { DashboardLayout } from "@layouts";
+import { ROUTES } from "./constants";
+import { DashboardLayout, PublicLayout } from "@layouts";
 
 export const routes = createBrowserRouter([
   {
-    path: ROUTES.REGISTER,
-    element: <RegisterPage />,
-  },
-  {
-    path: ROUTES.LOGIN,
-    element: <LoginPage />,
+    path: ROUTES.HOME,
+    element: <PublicLayout />,
+    errorElement: <ErrorBoundary />,
+    children: [
+      {
+        index: true,
+        element: <RegisterPage />,
+      },
+      {
+        path: ROUTES.LOGIN,
+        element: <LoginPage />,
+      },
+    ],
   },
   {
     path: ROUTES.DASHBOARD,
@@ -28,20 +35,20 @@ export const routes = createBrowserRouter([
       {
         index: true,
         path: ROUTES.WORKSPACES,
-        element: <WorkspacesPage />
+        element: <WorkspacesPage />,
       },
       {
         path: ROUTES.WORKSPACE(),
-        element: <WorkspacePage />
+        element: <WorkspacePage />,
       },
       {
         path: ROUTES.PROFILE,
-        element: <ProfilePage />
-      }
-    ]
+        element: <ProfilePage />,
+      },
+    ],
   },
   {
     path: ROUTES.NOT_FOUND,
-    element: <NotFound />
-  }
+    element: <NotFound />,
+  },
 ]);
