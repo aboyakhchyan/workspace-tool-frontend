@@ -18,7 +18,7 @@ Frontend application for managing workspaces. Built with React, Vite, and Materi
 Clone the repository and install dependencies:
 
 ```bash
-git clone <repo-url>
+git clone <https://github.com/aboyakhchyan/workspace-tool-frontend.git>
 cd workspace-tool-frontend
 npm install
 # or
